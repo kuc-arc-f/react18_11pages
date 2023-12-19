@@ -73,17 +73,19 @@ console.log(items);
         {pageItems.map((item: any ,index: number) => {
         return (
         <div key={index}>
-            <h3 className="text-3xl font-bold">{item.title}</h3>
+            <Link to={`/test/show?id=${item.id}`}><h3 className="text-3xl font-bold">{item.title}</h3>
+            </Link>
             <span>ID: {item.id}, {item.createdAt}</span>
             <hr />
         </div>
         )
         })}
-
     </div>
-
     )
     ;
 }
 
 export default Home;
+/*
+<h3 className="text-3xl font-bold">{item.title}</h3>
+*/

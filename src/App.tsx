@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/home';
 import About from './routes/about';
 import Test from './routes/test/App.tsx';
+import TestShow from './routes/test/show/App.tsx';
 //
 function App() {
 //  const [count, setCount] = useState(0)
@@ -17,9 +18,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/test/show" element={<TestShow />} />
       </Routes>
     </div>
   )
 }
 
 export default App
+/*
+<Route path="/book" element={<BookShow />} />
+*/
