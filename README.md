@@ -6,7 +6,7 @@
 
  date    : 2023/12/16 
 
- update  :
+ update  : 2023/12/19
 
 ***
 ### Summary
@@ -16,10 +16,12 @@ Ract 18 + vite, pages sample
 
 ***
 ### Setup
-```
-npm install
-```
 
+.env
+
+```
+VITE_API_URL=http://localhost:8787
+```
 
 ***
 ### Blog
