@@ -6,7 +6,7 @@
 
  date    : 2023/12/16 
 
- update  : 2023/12/19
+ update  : 2023/12/20
 
 ***
 ### Summary
@@ -25,6 +25,8 @@ VITE_API_URL=http://localhost:8787
 
 ***
 ### Blog
+
+https://zenn.dev/knaka0209/scraps/e28b9cd2b32cc9
 
 ***
 
