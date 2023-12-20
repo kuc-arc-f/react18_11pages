@@ -35,7 +35,7 @@ console.log(itemId);
         try{
             const item = await CrudShow.get(id);
             pageItem = item;
-console.log(item);
+console.log(pageItem);
             setUpdatetime(new Date().toString());
         } catch (e) {
             console.error(e);
@@ -64,6 +64,7 @@ console.log(item);
         <h2>TestShow</h2>
         <h1>{pageItem.title}</h1>
         <hr className="my-1" />
+        <pre>{pageItem.content}</pre>
         <div className="mb-2">
         </div>            
 

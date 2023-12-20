@@ -41,7 +41,7 @@ console.log(postItem);
             values.userId = 0;
 //            values.content = "";
             values.completed = 1;
-//console.log(values);
+console.log(values);
             const json = await HttpCommon.post(values, '/test/create');
 console.log(json);
             if (json.ret ===  LibConfig.OK_CODE) {
