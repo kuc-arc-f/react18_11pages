@@ -19,8 +19,9 @@ function Home() {
     //
     useEffect(() => {
         (async () => {
-            const itemId = searchParams.get('id') || "";
-console.log(itemId);
+            const id = searchParams.get('id') || "";
+            itemId = Number(id);
+console.log(id);
             getItem(Number(itemId));
         })()
 
@@ -47,11 +48,12 @@ console.log(pageItem);
      *
      * @return
      */
-    const createTodo = async function() {
+    const deleteItem = async function() {
         try{
-            const result = await CrudIndex.addItem();
+            const result = await CrudShow.delete(itemId);
             if(result) {
-                window.location.reload();
+//                window.location.reload();
+                window.location.href = '/test';
             }
         } catch (e) {
             console.error(e);
@@ -63,10 +65,13 @@ console.log(pageItem);
         <Head />
         <h2>TestShow</h2>
         <h1>{pageItem.title}</h1>
+        <p>ID: {pageItem.id}</p>
         <hr className="my-1" />
         <pre>{pageItem.content}</pre>
         <div className="mb-2">
         </div>            
+        <hr className="my-1" />
+        <button onClick={()=>deleteItem()}>delete</button>
 
     </div>
 
