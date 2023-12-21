@@ -61,22 +61,26 @@ console.log(pageItem);
     }
     //
     return (
-    <div>
+    <div className="container mx-auto my-2 px-8 bg-white">
         <Head />
-        <h2>TestShow</h2>
-        <h1>{pageItem.title}</h1>
+        <hr className="my-1" />
+        <h1 className="text-4xl font-bold">{pageItem.title}</h1>
         <p>ID: {pageItem.id}</p>
         <hr className="my-1" />
         <pre>{pageItem.content}</pre>
         <div className="mb-2">
         </div>            
         <hr className="my-1" />
-        <button onClick={()=>deleteItem()}>delete</button>
+        <button onClick={()=>deleteItem()} className="btn-red">delete</button>
 
     </div>
 
     )
     ;
 }
-
 export default Home;
+
+/*
+<h1 className="text-4xl font-bold">TestShow</h1>
+*/
+

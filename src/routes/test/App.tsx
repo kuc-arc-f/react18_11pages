@@ -49,7 +49,7 @@ console.log(items);
     }
     //
     return (
-    <div>
+    <div className="container mx-auto my-2 px-8 bg-white">
         <Head />
         <h2>Test</h2>
         <hr className="my-1" />
