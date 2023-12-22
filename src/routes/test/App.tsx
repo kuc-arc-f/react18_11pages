@@ -75,6 +75,12 @@ console.log(items);
         <div key={index}>
             <Link to={`/test/show?id=${item.id}`}><h3 className="text-3xl font-bold">{item.title}</h3>
             </Link>
+            {/*
+            <Link to={`/test/edit?id=${item.id}`}><button className="btn-outline-purple">edit</button>
+            </Link><br />
+            */}
+            <a href={`/test/edit?id=${item.id}`}><button className="btn-outline-purple">edit</button>
+            </a><br />
             <span>ID: {item.id}, {item.createdAt}</span>
             <hr />
         </div>

@@ -51,6 +51,37 @@ console.log(postItem);
             console.error(e);
         }
     },         
+        /**
+     *
+     * @param
+     *
+     * @return
+     */
+    update : async function(id: number) : Promise<any>
+    {
+        try{
+            let ret = false;
+            const values = Crud.getInputValues();
+            values.userId = 0;
+            values.id = id;
+//            values.content = "";
+            values.completed = 0;
+console.log(values);
+//return;
+            const json = await HttpCommon.post(values, '/test/update');
+console.log(json);
+            if (json.ret ===  LibConfig.OK_CODE) {
+                ret = true;
+            }
+            //clear
+            Crud.clearInputValues(); 
+            return ret;
+        } catch (e) {
+            console.error("Error, update");
+            console.error(e);
+            throw new Error('Error , update');
+        }
+    },
 }
 
 export default CrudShow;
