@@ -63,6 +63,9 @@ console.log(pageItem);
     return (
     <div className="container mx-auto my-2 px-8 bg-white">
         <Head />
+        <a href="/test">
+            <button className="btn-outline-purple ms-2 mt-2">Back</button>
+        </a><br />
         <hr className="my-1" />
         <h1 className="text-4xl font-bold">{pageItem.title}</h1>
         <p>ID: {pageItem.id}</p>

@@ -15,8 +15,6 @@ function Home() {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const [updatetime, setUpdatetime] = useState<string>("");
-//    const [todoTitle, setTodoTitle] = useState<string>("");
-//    const [todoContent, setTodoContent] = useState<string>("");
     //
     useEffect(() => {
         (async () => {
@@ -80,6 +78,9 @@ console.log(pageItem);
     return (
     <div className="container mx-auto my-2 px-8 bg-white">
         <Head />
+        <a href="/test">
+            <button className="btn-outline-purple ms-2 mt-2">Back</button>
+        </a><br />
         <h1 className="text-4xl font-bold mt-2">Edit</h1>
         <p>ID: {pageItem.id}</p>
         <hr className="my-1" />
@@ -98,12 +99,12 @@ console.log(pageItem);
                 placeholder="" defaultValue={todoContent}
             ></textarea>
         </div>        
-        <hr className="my-1" />
+        <hr className="my-4" />
         <span>{updatetime}</span><br />
         <hr className="my-1" />
-        <button onClick={()=>update()} className="btn-purple">update</button>
-        <hr className="my-1" />
-        <button onClick={()=>deleteItem()} className="btn-red">delete</button>
+        <button onClick={()=>update()} className="btn-purple">Save</button>
+        <hr className="my-4" />
+        <button onClick={()=>deleteItem()} className="btn-red">Delete</button>
 
     </div>
 

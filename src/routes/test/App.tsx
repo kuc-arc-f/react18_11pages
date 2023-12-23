@@ -51,7 +51,7 @@ console.log(items);
     return (
     <div className="container mx-auto my-2 px-8 bg-white">
         <Head />
-        <h2>Test</h2>
+        <h1 className="text-4xl font-bold mt-2">Test</h1>
         <hr className="my-1" />
         <div className="mb-2">
             <label className="text-2xl block text-gray-700 font-bold mb-2">Title</label>
@@ -79,7 +79,9 @@ console.log(items);
             <Link to={`/test/edit?id=${item.id}`}><button className="btn-outline-purple">edit</button>
             </Link><br />
             */}
-            <a href={`/test/edit?id=${item.id}`}><button className="btn-outline-purple">edit</button>
+            <a href={`/test/show?id=${item.id}`}><button className="btn-outline-purple">Show</button>
+            </a>
+            <a href={`/test/edit?id=${item.id}`}><button className="btn-outline-purple ms-2">edit</button>
             </a><br />
             <span>ID: {item.id}, {item.createdAt}</span>
             <hr />
